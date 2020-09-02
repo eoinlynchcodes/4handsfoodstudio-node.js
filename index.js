@@ -2,7 +2,6 @@ require('dotenv').config();
 
 const app = require('./api/server')
 
-
 const PORT = process.env.PORT || 3333
 
 // watch for connections on port 5000
