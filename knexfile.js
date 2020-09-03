@@ -17,7 +17,7 @@ module.exports = {
 
   production: {
     client: 'pg',
-    connection: process.env.DATABASE_URL,
+    connection: process.env.HEROKU_POSTGRESQL_CHARCOAL_URL,
     migrations: {
       directory: './data/migrations',
     },

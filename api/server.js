@@ -22,6 +22,16 @@ server.get('/menu', (req, res) => {
     })
 })
 
+server.post('/menu', (req, res) => {
+    MenuHelpers.addMenu(req.body)
+    .then(response => {
+        res.status(201).json(response);
+    })
+    .catch(error => {
+        res.status(500).json(error);
+    });
+});
+
 server.get('/', (req, res) => {
     res.send("Hello from server.js");
 });
